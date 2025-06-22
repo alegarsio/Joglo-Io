@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 app.get('/security', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'security.html'));
 });
-app.get('/business', (req, res) => {
+app.get('/agency', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'solution.html'));
 });
 app.get('/evenlister', (req,res) => {
