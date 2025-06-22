@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventLister - Features - joglo.io</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+            letter-spacing: -0.01em;
+        }
+        .text-balance { text-wrap: balance; }
+        .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .hover-lift:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+        .feature-image {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border: 1px solid #e2e8f0;
+        }
+        .tool-card {
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        .tool-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-white text-stone-900 antialiased">
+    <!-- Header -->
+    <header class="bg-white border-b border-stone-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-xl font-medium text-stone-900">
+                        joglo.io
+                    </a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-stone-600 hover:text-stone-900 transition-colors text-sm">Home</a>
+                    <a href="solution.html" class="text-stone-600 hover:text-stone-900 transition-colors text-sm">Solutions</a>
+                    <a href="business-solutions.html" class="text-stone-600 hover:text-stone-900 transition-colors text-sm">Business Solutions</a>
+                    <a href="#contact" class="text-stone-600 hover:text-stone-900 transition-colors text-sm">Contact</a>
+                    <button class="bg-stone-900 text-white px-4 py-2 rounded text-sm hover:bg-stone-800 transition-colors">
+                        Get Started
+                    </button>
+                </nav>
+                <!-- Mobile menu button -->
+                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden hidden border-t border-stone-200 py-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="/" class="text-stone-600 hover:text-stone-900 transition-colors text-sm">Home</a>
+                    <a href="solution.html" class="text-stone-600 hover:text-stone-900 transition-colors text-sm">Solutions</a>
+                    <a href="business-solutions.html" class="text-stone-600 hover:text-stone-900 transition-colors text-sm">Business Solutions</a>
+                    <a href="#contact" class="text-stone-600 hover:text-stone-900 transition-colors text-sm">Contact</a>
+                    <button class="bg-stone-900 text-white px-4 py-2 rounded text-sm hover:bg-stone-800 transition-colors w-fit">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-white pt-20 pb-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="mb-6">
+                <a href="business-solutions.html" class="text-sm text-stone-500 hover:text-stone-900 transition-colors">
+                    ← Back to Business Solutions
+                </a>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-medium text-stone-900 mb-6 leading-tight">
+                EventLister
+            </h1>
+            <p class="text-xl text-stone-600 mb-8 leading-relaxed">
+                A comprehensive event management platform that handles everything from creation to analytics. Simple, powerful, and built for modern event organizers.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3">
+                <button class="bg-stone-900 text-white px-6 py-3 rounded text-sm font-medium hover:bg-stone-800 transition-colors">
+                    Start Free Trial
+                </button>
+                <button class="border border-stone-300 text-stone-900 px-6 py-3 rounded text-sm font-medium hover:bg-stone-50 transition-colors">
+                    View Demo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Screenshots -->
+    <section class="bg-stone-50 py-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-2xl font-medium text-stone-900 mb-8 text-center">
+                Platform Preview
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Dashboard -->
+                <div class="bg-white rounded-lg border border-stone-200 p-6">
+                    <div class="bg-stone-100 h-32 rounded mb-4 flex items-center justify-center">
+                        <span class="text-stone-500 text-sm">Dashboard Interface</span>
+                    </div>
+                    <h3 class="font-medium text-stone-900 mb-2">Event Dashboard</h3>
+                    <p class="text-sm text-stone-600">Manage all your events from one central location</p>
+                </div>
+
+                <!-- Analytics -->
+                <div class="bg-white rounded-lg border border-stone-200 p-6">
+                    <div class="bg-stone-100 h-32 rounded mb-4 flex items-center justify-center">
+                        <span class="text-stone-500 text-sm">Analytics View</span>
+                    </div>
+                    <h3 class="font-medium text-stone-900 mb-2">Real-time Analytics</h3>
+                    <p class="text-sm text-stone-600">Track performance with detailed insights</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="bg-white py-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-2xl font-medium text-stone-900 mb-12">
+                Core Features
+            </h2>
+
+            <div class="space-y-16">
+                <!-- Event Creation -->
+                <div class="border-l-2 border-stone-200 pl-8">
+                    <h3 class="text-xl font-medium text-stone-900 mb-4">Event Creation & Management</h3>
+                    <p class="text-stone-600 mb-6 leading-relaxed">
+                        Build professional event pages with our intuitive drag-and-drop builder. Choose from templates or create custom designs with full multimedia support and smart scheduling tools.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-medium text-stone-900 mb-2">Visual Builder</h4>
+                            <p class="text-sm text-stone-600">Drag-and-drop interface with customizable templates for all event types.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-stone-900 mb-2">Smart Scheduling</h4>
+                            <p class="text-sm text-stone-600">Timezone support, recurring events, and conflict detection.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Registration -->
+                <div class="border-l-2 border-stone-200 pl-8">
+                    <h3 class="text-xl font-medium text-stone-900 mb-4">Registration & Ticketing</h3>
+                    <p class="text-stone-600 mb-6 leading-relaxed">
+                        Streamlined registration with flexible ticketing options, secure payment processing, and digital check-in systems for seamless attendee experiences.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-medium text-stone-900 mb-2">Flexible Tickets</h4>
+                            <p class="text-sm text-stone-600">Multiple ticket tiers with different pricing and access levels.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-stone-900 mb-2">QR Check-in</h4>
+                            <p class="text-sm text-stone-600">Contactless check-in with mobile app support.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Marketing -->
+                <div class="border-l-2 border-stone-200 pl-8">
+                    <h3 class="text-xl font-medium text-stone-900 mb-4">Marketing & Promotion</h3>
+                    <p class="text-stone-600 mb-6 leading-relaxed">
+                        Built-in marketing tools with email campaigns, social media integration, and SEO optimization to maximize event reach and attendance.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-medium text-stone-900 mb-2">Email Campaigns</h4>
+                            <p class="text-sm text-stone-600">Automated sequences for invitations, reminders, and follow-ups.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-stone-900 mb-2">Social Integration</h4>
+                            <p class="text-sm text-stone-600">One-click sharing with auto-generated promotional content.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analytics -->
+                <div class="border-l-2 border-stone-200 pl-8">
+                    <h3 class="text-xl font-medium text-stone-900 mb-4">Analytics & Reporting</h3>
+                    <p class="text-stone-600 mb-6 leading-relaxed">
+                        Comprehensive analytics dashboard with real-time monitoring, attendee insights, and detailed revenue reports for data-driven decisions.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-medium text-stone-900 mb-2">Real-time Dashboard</h4>
+                            <p class="text-sm text-stone-600">Live monitoring with customizable widgets and notifications.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-stone-900 mb-2">Revenue Reports</h4>
+                            <p class="text-sm text-stone-600">Financial tracking with ROI calculations and profitability analysis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="bg-white py-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-2xl font-medium text-stone-900 mb-8 text-center">
+                Built with Reliable Technology
+            </h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="text-center p-4 border border-stone-200 rounded-lg">
+                    <div class="w-8 h-8 bg-blue-100 rounded mx-auto mb-2"></div>
+                    <h3 class="text-sm font-medium text-stone-900">Google Cloud</h3>
+                </div>
+                
+                <div class="text-center p-4 border border-stone-200 rounded-lg">
+                    <div class="w-8 h-8 bg-green-100 rounded mx-auto mb-2"></div>
+                    <h3 class="text-sm font-medium text-stone-900">PostgreSQL</h3>
+                </div>
+                
+                <div class="text-center p-4 border border-stone-200 rounded-lg">
+                    <div class="w-8 h-8 bg-purple-100 rounded mx-auto mb-2"></div>
+                    <h3 class="text-sm font-medium text-stone-900">Stripe</h3>
+                </div>
+                
+                <div class="text-center p-4 border border-stone-200 rounded-lg">
+                    <div class="w-8 h-8 bg-orange-100 rounded mx-auto mb-2"></div>
+                    <h3 class="text-sm font-medium text-stone-900">SendGrid</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section class="bg-stone-50 py-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-2xl font-medium text-stone-900 mb-12">
+                Technical Specifications
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-lg font-medium text-stone-900 mb-4">Platform Features</h3>
+                    <div class="space-y-3 text-sm text-stone-600">
+                        <div>• Cloud-based SaaS platform</div>
+                        <div>• Mobile-responsive design</div>
+                        <div>• API access for integrations</div>
+                        <div>• Multi-language support</div>
+                        <div>• White-label options available</div>
+                        <div>• Custom domain support</div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-medium text-stone-900 mb-4">Security & Compliance</h3>
+                    <div class="space-y-3 text-sm text-stone-600">
+                        <div>• SSL encryption for all data</div>
+                        <div>• PCI DSS compliant payments</div>
+                        <div>• GDPR compliance tools</div>
+                        <div>• Regular security audits</div>
+                        <div>• Data backup and recovery</div>
+                        <div>• Role-based access control</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="bg-white py-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-2xl font-medium text-stone-900 mb-4">
+                Simple Pricing
+            </h2>
+            <p class="text-stone-600 mb-12">
+                Choose the plan that fits your event needs. All plans include core features with no setup fees.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="border border-stone-200 rounded-lg p-6 bg-white">
+                    <h3 class="text-lg font-medium text-stone-900 mb-2">Starter</h3>
+                    <div class="text-3xl font-medium text-stone-900 mb-4">Free</div>
+                    <p class="text-sm text-stone-600 mb-6">Perfect for small events and getting started</p>
+                    <div class="space-y-2 text-sm text-stone-600 mb-6">
+                        <div>• Up to 100 attendees</div>
+                        <div>• Basic event builder</div>
+                        <div>• Email support</div>
+                        <div>• Standard templates</div>
+                    </div>
+                    <button class="w-full border border-stone-300 text-stone-900 px-4 py-2 rounded text-sm font-medium hover:bg-stone-50 transition-colors">
+                        Get Started
+                    </button>
+                </div>
+
+                <div class="border-2 border-stone-900 rounded-lg p-6 relative bg-white">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-stone-900 text-white px-3 py-1 rounded text-xs font-medium">
+                        Most Popular
+                    </div>
+                    <h3 class="text-lg font-medium text-stone-900 mb-2">Professional</h3>
+                    <div class="text-3xl font-medium text-stone-900 mb-4">$49<span class="text-base font-normal text-stone-600">/month</span></div>
+                    <p class="text-sm text-stone-600 mb-6">For growing organizations and regular events</p>
+                    <div class="space-y-2 text-sm text-stone-600 mb-6">
+                        <div>• Up to 1,000 attendees</div>
+                        <div>• Advanced features</div>
+                        <div>• Priority support</div>
+                        <div>• Custom branding</div>
+                        <div>• Analytics dashboard</div>
+                    </div>
+                    <button class="w-full bg-stone-900 text-white px-4 py-2 rounded text-sm font-medium hover:bg-stone-800 transition-colors">
+                        Start Free Trial
+                    </button>
+                </div>
+
+                <div class="border border-stone-200 rounded-lg p-6 bg-white">
+                    <h3 class="text-lg font-medium text-stone-900 mb-2">Enterprise</h3>
+                    <div class="text-3xl font-medium text-stone-900 mb-4">Custom</div>
+                    <p class="text-sm text-stone-600 mb-6">For large organizations with custom needs</p>
+                    <div class="space-y-2 text-sm text-stone-600 mb-6">
+                        <div>• Unlimited attendees</div>
+                        <div>• Custom integrations</div>
+                        <div>• Dedicated support</div>
+                        <div>• White-label solution</div>
+                        <div>• Advanced security</div>
+                    </div>
+                    <button class="w-full border border-stone-300 text-stone-900 px-4 py-2 rounded text-sm font-medium hover:bg-stone-50 transition-colors">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>

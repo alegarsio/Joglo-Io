@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Solutions - joglo.io</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+            letter-spacing: -0.01em;
+        }
+        .text-balance { text-wrap: balance; }
+        .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .hover-lift:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+        .gradient-mesh { 
+            background: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 40%, rgba(120, 219, 226, 0.1) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-900 antialiased">
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md border-b border-stone-200/50 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-semibold tracking-tight text-stone-900 hover:text-stone-700 transition-colors">
+                        joglo.io
+                    </a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-stone-600 hover:text-stone-900 transition-colors text-sm font-medium">Home</a>
+                    <a href="/business" class="text-stone-900 font-medium text-sm">Business Solutions</a>
+                    <a href="/security" class="text-stone-900 font-medium text-sm">Network Security Solutions</a>
+                    <button class="bg-stone-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-stone-800 transition-colors">
+                        Get Started
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-stone-50 pt-24 pb-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="max-w-4xl">
+                <div class="mb-6">
+                    
+                </div>
+                <div class="mb-6">
+                    <span class="text-sm font-semibold text-stone-500 uppercase tracking-wide">Business Solutions</span>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-medium tracking-tight text-stone-900 mb-8 text-balance leading-tight">
+                    Transform your 
+                    <span class="underline decoration-stone-300 decoration-4 underline-offset-8">business operations</span>
+                </h1>
+                <p class="text-xl lg:text-2xl text-stone-600 mb-12 max-w-3xl leading-relaxed">
+                    Three powerful software solutions designed to streamline operations, enhance customer relationships, and provide actionable business insights for modern enterprises.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Grid -->
+    <section class="bg-white py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="space-y-24">
+                <!-- Enterprise Management System -->
+                <div class="grid lg:grid-cols-2 gap-20 items-center">
+                    <div>
+                        <div class="mb-8">
+                            <span class="text-sm font-semibold text-stone-500 uppercase tracking-wide mb-4 block">01 — Event Management</span>
+                            <h2 class="text-4xl lg:text-5xl font-medium text-stone-900 mb-6 text-balance">
+                                Evenlister Platform
+                            </h2>
+                            <p class="text-xl text-stone-600 leading-relaxed mb-8">
+                                Evenlister is a next-level event management platform that simplifies the planning, execution, and analysis of events. From small gatherings to large conferences, Evenlister provides the tools you need to create memorable experiences.
+                            </p>
+                        </div>
+
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-stone-100 rounded-full flex items-center justify-center mt-1">
+                                    <div class="w-2 h-2 bg-stone-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-stone-900 mb-2">Comprehensive event analytics</h3>
+                                    <p class="text-stone-600">Evenlister presents comprehensive event details such as participant attendance figures, participant ratings, event development status and others..</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-stone-100 rounded-full flex items-center justify-center mt-1">
+                                    <div class="w-2 h-2 bg-stone-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-stone-900 mb-2">More sophisticated attendance recording </h3>
+                                    <p class="text-stone-600">By utilizing attendance recording technology such as AI powered face recognition and QR code, Eventlister can help record participant attendance more optimally.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-stone-100 rounded-full flex items-center justify-center mt-1">
+                                    <div class="w-2 h-2 bg-stone-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-stone-900 mb-2">Learn more about the event participants</h3>
+                                    <p class="text-stone-600">Evenlister pays close attention to your event attendees. You can see what events they like and what categories they like so you can create and plan your event optimally.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="bg-stone-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-stone-800 transition-colors">
+                            Explore Features
+                        </button>
+                    </div>
+                    
+                    <div class="bg-stone-100/50 rounded-3xl p-12 aspect-square flex items-center justify-center">
+                        <img src="images/image 9.png" alt="Event Management Illustration" class="w-100 h-100 object-cover rounded-2xl shadow-lg mx-auto mb-6">
+                       
+                    </div>
+                </div>
+
+                <!-- CRM System -->
+                <div class="grid lg:grid-cols-2 gap-20 items-center">
+                    <div class="lg:order-2">
+                        <div class="mb-8">
+                            <span class="text-sm font-semibold text-stone-500 uppercase tracking-wide mb-4 block">02 — Document Management System</span>
+                            <h2 class="text-4xl lg:text-5xl font-medium text-stone-900 mb-6 text-balance">
+                                RevisionStack
+                            </h2>
+                            <p class="text-xl text-stone-600 leading-relaxed mb-8">
+                                RevisionStack is a next-generation document revision management system and document repositoy that leverages AI for smart document reviewing, Intelligent Document Processing (IDP) and data visualization, this platform is designed to optimize document reviewing processes, enhance collaboration, and ensure compliance with industry standards.
+                            </p>
+                        </div>
+
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-stone-100 rounded-full flex items-center justify-center mt-1">
+                                    <div class="w-2 h-2 bg-stone-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-stone-900 mb-2">AI driven document review</h3>
+                                    <p class="text-stone-600">document review process can be more reliable and sophisticated .</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-stone-100 rounded-full flex items-center justify-center mt-1">
+                                    <div class="w-2 h-2 bg-stone-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-stone-900 mb-2">AI driven data visualization</h3>
+                                    <p class="text-stone-600">This platform uses AI to better visualize data for data such as excel, for example visualizing data with diagrams.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-stone-100 rounded-full flex items-center justify-center mt-1">
+                                    <div class="w-2 h-2 bg-stone-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-stone-900 mb-2">Simplification of the collection of documents to be reviewed.</h3>
+                                    <p class="text-stone-600">By using the file bucket system, the collection of documents to be reviewed becomes more optimal and structured.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="bg-stone-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-stone-800 transition-colors">
+                            Explore Features
+                        </button>
+                    </div>
+                    
+                    <div class="lg:order-1 bg-stone-100/50 rounded-3xl p-12 aspect-square flex items-center justify-center">
+                         <img src="images/Revistack.png" alt="Event Management Illustration" class="w-100 h-100 object-cover rounded-2xl shadow-lg mx-auto mb-6">
+                    </div>
+                </div>
+
+                <!-- Business Intelligence -->
+                <div class="grid lg:grid-cols-2 gap-20 items-center">
+                    <div>
+                        <div class="mb-8">
+                            <span class="text-sm font-semibold text-stone-500 uppercase tracking-wide mb-4 block">03 — Cashier And Sales</span>
+                            <h2 class="text-4xl lg:text-5xl font-medium text-stone-900 mb-6 text-balance">
+                                CasKas
+                            </h2>
+                            <p class="text-xl text-stone-600 leading-relaxed mb-8">
+                               Caskas is a sales and stock management platform, by utilizing machine learning algorithms and AI, this platform can help simplify the process of selling goods on different scales.
+                            </p>
+                        </div>
+
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-stone-100 rounded-full flex items-center justify-center mt-1">
+                                    <div class="w-2 h-2 bg-stone-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-stone-900 mb-2">AI & Machine Learning driven data</h3>
+                                    <p class="text-stone-600">Caskas utilizes machine learning and AI algorithms to help recognize buying and selling patterns, determine trends over time and detect anomalies in real time.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-stone-100 rounded-full flex items-center justify-center mt-1">
+                                    <div class="w-2 h-2 bg-stone-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-stone-900 mb-2">Predict future income</h3>
+                                    <p class="text-stone-600">With the machine learning algorithm, Caskas also has the ability to predict future income, transactions and sales results..</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-stone-100 rounded-full flex items-center justify-center mt-1">
+                                    <div class="w-2 h-2 bg-stone-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-stone-900 mb-2">Executive Reporting</h3>
+                                    <p class="text-stone-600">Produce more comprehensive reports and easy to customize for more detailed results.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="bg-stone-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-stone-800 transition-colors">
+                            Explore Features
+                        </button>
+                    </div>
+                    
+                    <div class="bg-stone-100/50 rounded-3xl p-12 aspect-square flex items-center justify-center">
+                        <img src="images/caskas.png" alt="Business Intelligence Illustration" class="w-100 h-100 object-cover rounded-2xl shadow-lg mx-auto mb-6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    <!-- CTA Section -->
+    <section class="bg-stone-100/50 py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl lg:text-5xl font-medium text-stone-900 mb-8 text-balance">
+                    Ready to transform your business?
+                </h2>
+                <p class="text-xl text-stone-600 mb-12 leading-relaxed">
+                    Start with a free consultation to understand how our business solutions can streamline your operations and drive growth.
+                </p>
+                
+                <div class="grid sm:grid-cols-2 gap-4 max-w-lg mx-auto mb-8">
+                    <button class="bg-stone-900 text-white px-8 py-4 rounded-lg font-medium hover:bg-stone-800 transition-colors">
+                        Schedule Consultation
+                    </button>
+                    <button class="border border-stone-300 text-stone-900 px-8 py-4 rounded-lg font-medium hover:bg-stone-50 transition-colors">
+                        Request Demo
+                    </button>
+                </div>
+                
+                <div class="text-stone-500 text-sm">
+                    Free 30-day trial available • No setup fees • Cancel anytime
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Security Solutions - joglo.io</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+            letter-spacing: -0.01em;
+        }
+        .text-balance { text-wrap: balance; }
+        .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .hover-lift:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+        .gradient-mesh { 
+            background: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 40%, rgba(120, 219, 226, 0.1) 0%, transparent 50%);
+        }
+        .security-grid {
+            background: linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px),
+                        linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-900 antialiased">
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md border-b border-stone-200/50 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-semibold tracking-tight text-stone-900 hover:text-stone-700 transition-colors">
+                        joglo.io
+                    </a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-stone-600 hover:text-stone-900 transition-colors text-sm font-medium">Home</a>
+                    <a href="/business" class="text-stone-900 font-medium text-sm">Business Solutions</a>
+                    <a href="security.html" class="text-stone-900 font-medium text-sm">Network Security Solutions</a>
+                    <button class="bg-stone-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-stone-800 transition-colors">
+                        Get Started
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-stone-50 pt-24 pb-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="max-w-4xl">
+                <div class="mb-6">
+                    
+                </div>
+                <div class="mb-6">
+                    <span class="text-sm font-semibold text-stone-500 uppercase tracking-wide">Network Security</span>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-medium tracking-tight text-stone-900 mb-8 text-balance leading-tight">
+                    Serecon 
+                    <span class="underline decoration-stone-300 decoration-4 underline-offset-8">Network Security Platform</span>
+                </h1>
+                <p class="text-xl lg:text-2xl text-stone-600 mb-12 max-w-3xl leading-relaxed">
+                    Serecon is a network infrastructure security monitoring and testing platform. By utilizing machine learning and AI algorithms, this platform can help the process of network penetration testing and network security monitoring more efficiently.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Stats -->
+    <section class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-stone-900 mb-2">24/7</div>
+                    <div class="text-stone-600 text-sm">Continuous Monitoring</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-stone-900 mb-2">99.9%</div>
+                    <div class="text-stone-600 text-sm">Threat Detection Rate</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-stone-900 mb-2">&lt;1min</div>
+                    <div class="text-stone-600 text-sm">Response Time</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-stone-900 mb-2">AI</div>
+                    <div class="text-stone-600 text-sm">Powered Detection</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Security Features -->
+    <section class="bg-stone-100/50 py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center mb-20">
+                <h2 class="text-4xl lg:text-5xl font-medium text-stone-900 mb-8 text-balance">
+                    Comprehensive security platform
+                </h2>
+                <p class="text-xl text-stone-600 leading-relaxed">
+                    Multi-layered security approach combining advanced threat detection, real-time monitoring, and automated response capabilities.
+                </p>
+            </div>
+
+            <div class="space-y-24">
+                <!-- Real-time Threat Detection -->
+                <div class="grid lg:grid-cols-2 gap-20 items-center">
+                    <div>
+                        <div class="mb-8">
+                            <span class="text-sm font-semibold text-stone-500 uppercase tracking-wide mb-4 block">01 — Threat Detection</span>
+                            <h3 class="text-4xl font-medium text-stone-900 mb-6 text-balance">
+                                AI-powered threat identification
+                            </h3>
+                            <p class="text-xl text-stone-600 leading-relaxed mb-8">
+                                Advanced machine learning algorithms continuously analyze network traffic, user behavior, and system activities to identify potential security threats in real-time.
+                            </p>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mt-1">
+                                    <div class="w-2 h-2 bg-red-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-stone-900 mb-2">Behavioral Analysis</h4>
+                                    <p class="text-stone-600">Monitor user and system behavior patterns to detect anomalies and potential insider threats.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mt-1">
+                                    <div class="w-2 h-2 bg-red-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-stone-900 mb-2">Signature-based Detection</h4>
+                                    <p class="text-stone-600">Identify known threats using comprehensive malware signatures and threat intelligence feeds.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mt-1">
+                                    <div class="w-2 h-2 bg-red-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-stone-900 mb-2">Zero-day Protection</h4>
+                                    <p class="text-stone-600">Advanced heuristic analysis to detect previously unknown threats and vulnerabilities.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tambahkan Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="bg-white rounded-2xl p-8 shadow-sm">
+  <h2 class="text-xl font-semibold text-gray-800 mb-4">Kesehatan Jaringan Sekilas</h2>
+  <hr class="mb-6">
+
+  <div class="mb-6">
+    <h3 class="text-md font-semibold text-gray-700 mb-2">Distribusi Status Host</h3>
+    <canvas id="statusChart" height="150"></canvas>
+  </div>
+
+  <div>
+    <h3 class="text-md font-semibold text-gray-700">Host Kritis (Down/Error)</h3>
+    <!-- Tambahkan bagian daftar host kritis jika diperlukan -->
+  </div>
+</div>
+
+<script>
+  const ctx = document.getElementById('statusChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['UP', 'DOWN', 'LAINNYA (Error/Unknown)'],
+      datasets: [{
+        label: 'Jumlah Host',
+        data: [30, 1, 8], // Ganti dengan data kamu
+        backgroundColor: ['#38bdf8', '#f472b6', '#cbd5e1'],
+        borderColor: '#0ea5e9',
+        borderWidth: 2,
+        pointBackgroundColor: ['#38bdf8', '#f472b6', '#cbd5e1'],
+        pointBorderWidth: 2,
+        pointRadius: 6,
+        tension: 0.4,
+        fill: false,
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'Jumlah Host',
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'Status',
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: false
+        }
+      }
+    }
+  });
+</script>
+
+                </div>
+
+                <!-- Real-time Monitoring -->
+                <div class="grid lg:grid-cols-2 gap-20 items-center">
+                    <div class="lg:order-2">
+                        <div class="mb-8">
+                            <span class="text-sm font-semibold text-stone-500 uppercase tracking-wide mb-4 block">02 — Real-time Monitoring</span>
+                            <h3 class="text-4xl font-medium text-stone-900 mb-6 text-balance">
+                                Comprehensive network visibility
+                            </h3>
+                            <p class="text-xl text-stone-600 leading-relaxed mb-8">
+                                Complete visibility into your network infrastructure with real-time monitoring, traffic analysis, and security event correlation across all endpoints and systems.
+                            </p>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-1">
+                                    <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-stone-900 mb-2">Network Traffic Analysis</h4>
+                                    <p class="text-stone-600">Deep packet inspection and traffic flow analysis to identify suspicious network activities.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-1">
+                                    <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-stone-900 mb-2">Endpoint Monitoring</h4>
+                                    <p class="text-stone-600">Continuous monitoring of all connected devices and endpoints for security compliance.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-1">
+                                    <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-stone-900 mb-2">Security Event Correlation</h4>
+                                    <p class="text-stone-600">Intelligent correlation of security events to identify complex attack patterns and threats.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tambahkan Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="bg-white rounded-2xl p-8 shadow-sm">
+  <h2 class="text-xl font-semibold text-gray-800 mb-4">Ringkasan Prediksi Potensi Serangan (ML)</h2>
+  <hr class="mb-6">
+
+  <canvas id="attackPredictionChart" height="200"></canvas>
+</div>
+
+<script>
+  const ct = document.getElementById('attackPredictionChart').getContext('2d');
+  new Chart(ct, {
+    type: 'bar',
+    data: {
+      labels: ['SSH_BruteForce', 'WebApp_Generic'],
+      datasets: [{
+        label: 'Jumlah Prediksi Potensi Serangan',
+        data: [30, 58], // Ganti angka sesuai data kamu
+        backgroundColor: '#3b82f6',
+        borderRadius: 8
+      }]
+    },
+    options: {
+      indexAxis: 'y', // Untuk horizontal bar
+      responsive: true,
+      plugins: {
+        legend: {
+          display: false
+        },
+        title: {
+          display: true,
+          text: 'Top Prediksi Potensi Serangan (ML)',
+          font: {
+            size: 16,
+            weight: 'bold'
+          },
+          color: '#1f2937',
+          padding: {
+            bottom: 10
+          }
+        }
+      },
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: 'Jumlah Prediksi Potensi Serangan',
+            color: '#1f2937',
+            font: {
+              size: 14
+            }
+          },
+          beginAtZero: true
+        },
+        y: {
+          ticks: {
+            color: '#1f2937',
+            font: {
+              size: 13,
+              weight: 'bold'
+            }
+          }
+        }
+      }
+    }
+  });
+</script>
+
+                </div>
+
+                <!-- Automated Incident Response -->
+                <div class="grid lg:grid-cols-2 gap-20 items-center">
+                    <div>
+                        <div class="mb-8">
+                            <span class="text-sm font-semibold text-stone-500 uppercase tracking-wide mb-4 block">03 — Incident Response</span>
+                            <h3 class="text-4xl font-medium text-stone-900 mb-6 text-balance">
+                                Automated threat mitigation
+                            </h3>
+                            <p class="text-xl text-stone-600 leading-relaxed mb-8">
+                                Immediate automated response to security incidents with customizable playbooks, threat containment, and recovery procedures to minimize impact and downtime.
+                            </p>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
+                                    <div class="w-2 h-2 bg-purple-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-stone-900 mb-2">Automatic Threat Containment</h4>
+                                    <p class="text-stone-600">Immediately isolate and contain threats to prevent lateral movement and further damage.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
+                                    <div class="w-2 h-2 bg-purple-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-stone-900 mb-2">Custom Response Playbooks</h4>
+                                    <p class="text-stone-600">Tailored incident response procedures based on threat type and organizational requirements.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
+                                    <div class="w-2 h-2 bg-purple-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-stone-900 mb-2">Recovery & Forensics</h4>
+                                    <p class="text-stone-600">Automated system recovery and detailed forensic analysis for incident investigation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tambahkan Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<div class="bg-white rounded-2xl p-8 shadow-sm">
+    <h2 class="text-xl font-semibold text-gray-800 mb-4">Distribusi Prediksi Risiko Port (ML)</h2>
+    <hr class="mb-6">
+
+    <div class="flex justify-center">
+        <div class="w-40 h-40">
+            <canvas id="riskChart" width="160" height="160"></canvas>
+        </div>
+    </div>
+
+    <div class="flex justify-center mt-4 space-x-4 text-sm">
+        <div class="flex items-center space-x-2">
+            <div class="w-4 h-4 bg-red-400 rounded"></div>
+            <span class="text-gray-700">Tinggi</span>
+        </div>
+        <div class="flex items-center space-x-2">
+            <div class="w-4 h-4 bg-orange-300 rounded"></div>
+            <span class="text-gray-700">Medium</span>
+        </div>
+        <div class="flex items-center space-x-2">
+            <div class="w-4 h-4 bg-green-400 rounded"></div>
+            <span class="text-gray-700">Rendah</span>
+        </div>
+    </div>
+
+    <p class="text-sm text-slate-500 italic text-center mt-6">
+        Menampilkan distribusi prediksi risiko dari model ML untuk semua port terbuka yang terdeteksi.
+    </p>
+</div>
+
+<script>
+    const cts = document.getElementById('riskChart').getContext('2d');
+    new Chart(cts, {
+        type: 'doughnut',
+        data: {
+            labels: ['Tinggi', 'Medium', 'Rendah'],
+            datasets: [{
+                data: [81, 18, 1], // Ubah sesuai data aktual
+                backgroundColor: ['#f87171', '#fdba74', '#4ade80'],
+                borderColor: ['#f87171', '#fdba74', '#4ade80'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            cutout: '70%',
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+</script>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Analytics -->
+    <section class="bg-white py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center mb-20">
+                <h2 class="text-4xl lg:text-5xl font-medium text-stone-900 mb-8 text-balance">
+                    Advanced security analytics
+                </h2>
+                <p class="text-xl text-stone-600 leading-relaxed">
+                    Comprehensive security reporting and analytics to understand your security posture and compliance status.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-stone-50 rounded-xl p-8 hover-lift border border-stone-200/50 text-center">
+                    <div class="w-16 h-16 bg-red-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+                        <span class="text-red-600 font-bold text-lg">⚠</span>
+                    </div>
+                    <h3 class="font-semibold text-stone-900 mb-3">Threat Intelligence</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Real-time threat intelligence feeds and risk assessments for proactive security.</p>
+                </div>
+                
+                <div class="bg-stone-50 rounded-xl p-8 hover-lift border border-stone-200/50 text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+                        <span class="text-blue-600 font-bold text-lg">📊</span>
+                    </div>
+                    <h3 class="font-semibold text-stone-900 mb-3">Security Dashboards</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Customizable dashboards with real-time security metrics and KPIs.</p>
+                </div>
+                
+                <div class="bg-stone-50 rounded-xl p-8 hover-lift border border-stone-200/50 text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+                        <span class="text-green-600 font-bold text-lg">✓</span>
+                    </div>
+                    <h3 class="font-semibold text-stone-900 mb-3">Compliance Reporting</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Automated compliance reports for industry standards and regulations.</p>
+                </div>
+                
+                <div class="bg-stone-50 rounded-xl p-8 hover-lift border border-stone-200/50 text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+                        <span class="text-purple-600 font-bold text-lg">🔍</span>
+                    </div>
+                    <h3 class="font-semibold text-stone-900 mb-3">Forensic Analysis</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Detailed forensic capabilities for incident investigation and evidence collection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deployment Options -->
+    <section class="bg-stone-100/50 py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center mb-20">
+                <h2 class="text-4xl lg:text-5xl font-medium text-stone-900 mb-8 text-balance">
+                    Flexible deployment options
+                </h2>
+                <p class="text-xl text-stone-600 leading-relaxed">
+                    Deploy our security platform according to your infrastructure requirements and security policies.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-8 hover-lift border border-stone-200/50">
+                    <h3 class="font-semibold text-stone-900 mb-4">Cloud-based</h3>
+                    <p class="text-stone-600 leading-relaxed mb-6">Fully managed security platform hosted in secure cloud infrastructure with automatic updates and scaling.</p>
+                    <ul class="space-y-2 text-sm text-stone-600">
+                        <li>• Rapid deployment</li>
+                        <li>• Automatic updates</li>
+                        <li>• Global threat intelligence</li>
+                        <li>• 24/7 managed service</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 hover-lift border border-stone-200/50">
+                    <h3 class="font-semibold text-stone-900 mb-4">On-premises</h3>
+                    <p class="text-stone-600 leading-relaxed mb-6">Complete control over your security infrastructure with on-premises deployment for maximum data sovereignty.</p>
+                    <ul class="space-y-2 text-sm text-stone-600">
+                        <li>• Full data control</li>
+                        <li>• Custom configurations</li>
+                        <li>• Air-gapped deployment</li>
+                        <li>• Compliance ready</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-stone-900 text-white rounded-xl p-8 transform scale-105">
+                    <h3 class="font-semibold mb-4">Hybrid</h3>
+                    <p class="text-stone-300 leading-relaxed mb-6">Best of both worlds with hybrid deployment combining cloud intelligence and on-premises control.</p>
+                    <ul class="space-y-2 text-sm text-stone-300">
+                        <li>• Cloud threat intelligence</li>
+                        <li>• On-premises processing</li>
+                        <li>• Flexible data policies</li>
+                        <li>• Unified management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="bg-white py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-20">
+                <h2 class="text-4xl lg:text-5xl font-medium text-stone-900 mb-8 text-balance">
+                    Enterprise security pricing
+                </h2>
+                <p class="text-xl text-stone-600 leading-relaxed">
+                    Comprehensive security solutions tailored to your organization size and requirements.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-stone-50 rounded-xl p-8 border border-stone-200/50">
+                    <h3 class="font-semibold text-stone-900 mb-2">Starter</h3>
+                    <p class="text-stone-600 text-sm mb-6">Essential security for small businesses</p>
+                    <div class="text-3xl font-bold text-stone-900 mb-6">$299<span class="text-sm font-normal text-stone-600">/month</span></div>
+                    <ul class="space-y-3 text-sm text-stone-600 mb-8">
+                        <li>• Up to 50 endpoints</li>
+                        <li>• Basic threat detection</li>
+                        <li>• Email & chat support</li>
+                        <li>• Standard dashboards</li>
+                    </ul>
+                    <button class="w-full bg-stone-100 text-stone-900 py-3 rounded-lg font-medium hover:bg-stone-200 transition-colors">
+                        Get Started
+                    </button>
+                </div>
+                
+                <div class="bg-stone-900 text-white rounded-xl p-8 transform scale-105">
+                    <h3 class="font-semibold mb-2">Professional</h3>
+                    <p class="text-stone-300 text-sm mb-6">Advanced security for growing companies</p>
+                    <div class="text-3xl font-bold mb-6">$899<span class="text-sm font-normal text-stone-300">/month</span></div>
+                    <ul class="space-y-3 text-sm text-stone-300 mb-8">
+                        <li>• Up to 500 endpoints</li>
+                        <li>• AI-powered detection</li>
+                        <li>• 24/7 phone support</li>
+                        <li>• Advanced analytics</li>
+                        <li>• Incident response</li>
+                    </ul>
+                    <button class="w-full bg-white text-stone-900 py-3 rounded-lg font-medium hover:bg-stone-100 transition-colors">
+                        Most Popular
+                    </button>
+                </div>
+                
+                <div class="bg-stone-50 rounded-xl p-8 border border-stone-200/50
