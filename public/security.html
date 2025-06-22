@@ -38,7 +38,7 @@
                 </div>
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="/" class="text-stone-600 hover:text-stone-900 transition-colors text-sm font-medium">Home</a>
-                    <a href="/business" class="text-stone-900 font-medium text-sm">Business Solutions</a>
+                    <a href="/agency" class="text-stone-900 font-medium text-sm">Business Solutions</a>
                     <a href="security.html" class="text-stone-900 font-medium text-sm">Network Security Solutions</a>
                     <button class="bg-stone-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-stone-800 transition-colors">
                         Get Started
@@ -110,12 +110,12 @@
                 <div class="grid lg:grid-cols-2 gap-20 items-center">
                     <div>
                         <div class="mb-8">
-                            <span class="text-sm font-semibold text-stone-500 uppercase tracking-wide mb-4 block">01 — Threat Detection</span>
+                            <span class="text-sm font-semibold text-stone-500 uppercase tracking-wide mb-4 block">01 — Infrastructure Health Detection</span>
                             <h3 class="text-4xl font-medium text-stone-900 mb-6 text-balance">
-                                AI-powered threat identification
+                               Monitor the health of your network infrastructure in real time
                             </h3>
                             <p class="text-xl text-stone-600 leading-relaxed mb-8">
-                                Advanced machine learning algorithms continuously analyze network traffic, user behavior, and system activities to identify potential security threats in real-time.
+                               Ensuring the health of your network infrastructure in real time is very important, therefore serecon ensures that the health of your infrastructure is properly monitored.
                             </p>
                         </div>
 
@@ -125,8 +125,8 @@
                                     <div class="w-2 h-2 bg-red-600 rounded-full"></div>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-stone-900 mb-2">Behavioral Analysis</h4>
-                                    <p class="text-stone-600">Monitor user and system behavior patterns to detect anomalies and potential insider threats.</p>
+                                    <h4 class="font-semibold text-stone-900 mb-2">Provide warnings automatically and immediately</h4>
+                                    <p class="text-stone-600">Helps you reduce the risk of host downtime and errors.</p>
                                 </div>
                             </div>
                             
@@ -135,8 +135,8 @@
                                     <div class="w-2 h-2 bg-red-600 rounded-full"></div>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-stone-900 mb-2">Signature-based Detection</h4>
-                                    <p class="text-stone-600">Identify known threats using comprehensive malware signatures and threat intelligence feeds.</p>
+                                    <h4 class="font-semibold text-stone-900 mb-2">Real time performance insights</h4>
+                                    <p class="text-stone-600">Obtain real-time network infrastructure health data collection.</p>
                                 </div>
                             </div>
                             
@@ -145,8 +145,8 @@
                                     <div class="w-2 h-2 bg-red-600 rounded-full"></div>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-stone-900 mb-2">Zero-day Protection</h4>
-                                    <p class="text-stone-600">Advanced heuristic analysis to detect previously unknown threats and vulnerabilities.</p>
+                                    <h4 class="font-semibold text-stone-900 mb-2">Reveal health results automatically</h4>
+                                    <p class="text-stone-600">Reduce manual network health monitoring.</p>
                                 </div>
                             </div>
                         </div>
@@ -155,63 +155,63 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <div class="bg-white rounded-2xl p-8 shadow-sm">
-  <h2 class="text-xl font-semibold text-gray-800 mb-4">Kesehatan Jaringan Sekilas</h2>
-  <hr class="mb-6">
+<h2 class="text-xl font-semibold text-gray-800 mb-4">Network Health Overview</h2>
+<hr class="mb-6">
 
-  <div class="mb-6">
-    <h3 class="text-md font-semibold text-gray-700 mb-2">Distribusi Status Host</h3>
+<div class="mb-6">
+    <h3 class="text-md font-semibold text-gray-700 mb-2">Host Status Distribution</h3>
     <canvas id="statusChart" height="150"></canvas>
-  </div>
+</div>
 
-  <div>
-    <h3 class="text-md font-semibold text-gray-700">Host Kritis (Down/Error)</h3>
-    <!-- Tambahkan bagian daftar host kritis jika diperlukan -->
-  </div>
+<div>
+    <h3 class="text-md font-semibold text-gray-700">Critical Hosts (Down/Error)</h3>
+    <!-- Add critical host list section if needed -->
+</div>
 </div>
 
 <script>
   const ctx = document.getElementById('statusChart').getContext('2d');
-  new Chart(ctx, {
+new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['UP', 'DOWN', 'LAINNYA (Error/Unknown)'],
-      datasets: [{
-        label: 'Jumlah Host',
-        data: [30, 1, 8], // Ganti dengan data kamu
-        backgroundColor: ['#38bdf8', '#f472b6', '#cbd5e1'],
-        borderColor: '#0ea5e9',
-        borderWidth: 2,
-        pointBackgroundColor: ['#38bdf8', '#f472b6', '#cbd5e1'],
-        pointBorderWidth: 2,
-        pointRadius: 6,
-        tension: 0.4,
-        fill: false,
-      }]
+        labels: ['UP', 'DOWN', 'OTHERS (Error/Unknown)'],
+        datasets: [{
+            label: 'Number of Hosts',
+            data: [30, 1, 8], // Change with your data
+            backgroundColor: ['#38bdf8', '#f472b6', '#cbd5e1'],
+            borderColor: '#0ea5e9',
+            borderWidth: 2,
+            pointBackgroundColor: ['#38bdf8', '#f472b6', '#cbd5e1'],
+            pointBorderWidth: 2,
+            pointRadius: 6,
+            tension: 0.4,
+            fill: false,
+        }]
     },
     options: {
-      responsive: true,
-      scales: {
-        y: {
-          beginAtZero: true,
-          title: {
-            display: true,
-            text: 'Jumlah Host',
-          }
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Number of Hosts',
+                }
+            },
+            x: {
+                title: {
+                    display: true,
+                    text: 'Status',
+                }
+            }
         },
-        x: {
-          title: {
-            display: true,
-            text: 'Status',
-          }
+        plugins: {
+            legend: {
+                display: false
+            }
         }
-      },
-      plugins: {
-        legend: {
-          display: false
-        }
-      }
     }
-  });
+});
 </script>
 
                 </div>
@@ -222,11 +222,10 @@
                         <div class="mb-8">
                             <span class="text-sm font-semibold text-stone-500 uppercase tracking-wide mb-4 block">02 — Real-time Monitoring</span>
                             <h3 class="text-4xl font-medium text-stone-900 mb-6 text-balance">
-                                Comprehensive network visibility
+                              Threat detection powered by machine learning and AI algorithms inside every device
                             </h3>
                             <p class="text-xl text-stone-600 leading-relaxed mb-8">
-                                Complete visibility into your network infrastructure with real-time monitoring, traffic analysis, and security event correlation across all endpoints and systems.
-                            </p>
+                               By utilizing machine learning and AI, this platform can help predict and detect vulnerabilities in your network infrastructure.
                         </div>
 
                         <div class="space-y-6">
@@ -235,8 +234,8 @@
                                     <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-stone-900 mb-2">Network Traffic Analysis</h4>
-                                    <p class="text-stone-600">Deep packet inspection and traffic flow analysis to identify suspicious network activities.</p>
+                                    <h4 class="font-semibold text-stone-900 mb-2">Predict vulnerabilities immediately</h4>
+                                    <p class="text-stone-600">Reduce the risks arising from vulnerabilities in network infrastructure.</p>
                                 </div>
                             </div>
                             
@@ -245,8 +244,8 @@
                                     <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-stone-900 mb-2">Endpoint Monitoring</h4>
-                                    <p class="text-stone-600">Continuous monitoring of all connected devices and endpoints for security compliance.</p>
+                                    <h4 class="font-semibold text-stone-900 mb-2">Machine Learning driven data</h4>
+                                    <p class="text-stone-600">Through a comprehensive machine learning process to predict vulnerabilities and produce accurate results.</p>
                                 </div>
                             </div>
                             
@@ -255,8 +254,8 @@
                                     <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-stone-900 mb-2">Security Event Correlation</h4>
-                                    <p class="text-stone-600">Intelligent correlation of security events to identify complex attack patterns and threats.</p>
+                                    <h4 class="font-semibold text-stone-900 mb-2">Port-based vulnerability analysis</h4>
+                                    <p class="text-stone-600">Supports network security vulnerability prediction by testing against ports.</p>
                                 </div>
                             </div>
                         </div>
@@ -265,69 +264,70 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <div class="bg-white rounded-2xl p-8 shadow-sm">
-  <h2 class="text-xl font-semibold text-gray-800 mb-4">Ringkasan Prediksi Potensi Serangan (ML)</h2>
-  <hr class="mb-6">
+    <h2 class="text-xl font-semibold text-gray-800 mb-4">Attack Prediction Summary (ML)</h2>
+    <hr class="mb-6">
 
-  <canvas id="attackPredictionChart" height="200"></canvas>
+    <canvas id="attackPredictionChart" height="120"></canvas>
 </div>
 
 <script>
-  const ct = document.getElementById('attackPredictionChart').getContext('2d');
-  new Chart(ct, {
-    type: 'bar',
-    data: {
-      labels: ['SSH_BruteForce', 'WebApp_Generic'],
-      datasets: [{
-        label: 'Jumlah Prediksi Potensi Serangan',
-        data: [30, 58], // Ganti angka sesuai data kamu
-        backgroundColor: '#3b82f6',
-        borderRadius: 8
-      }]
-    },
-    options: {
-      indexAxis: 'y', // Untuk horizontal bar
-      responsive: true,
-      plugins: {
-        legend: {
-          display: false
+    const ct = document.getElementById('attackPredictionChart').getContext('2d');
+    new Chart(ct, {
+        type: 'bar',
+        data: {
+            labels: ['SSH Brute Force', 'WebApp Generic'],
+            datasets: [{
+                label: 'Number of Attack Predictions',
+                data: [30, 58], // Change numbers as needed
+                backgroundColor: '#3b82f6',
+                borderRadius: 8
+            }]
         },
-        title: {
-          display: true,
-          text: 'Top Prediksi Potensi Serangan (ML)',
-          font: {
-            size: 16,
-            weight: 'bold'
-          },
-          color: '#1f2937',
-          padding: {
-            bottom: 10
-          }
-        }
-      },
-      scales: {
-        x: {
-          title: {
-            display: true,
-            text: 'Jumlah Prediksi Potensi Serangan',
-            color: '#1f2937',
-            font: {
-              size: 14
+        options: {
+            indexAxis: 'y', // Horizontal bar
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: true,
+                    text: 'Top Attack Predictions (ML)',
+                    font: {
+                        size: 16,
+                        weight: 'bold'
+                    },
+                    color: '#1f2937',
+                    padding: {
+                        bottom: 10
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Number of Attack Predictions',
+                        color: '#1f2937',
+                        font: {
+                            size: 14
+                        }
+                    },
+                    beginAtZero: true
+                },
+                y: {
+                    ticks: {
+                        color: '#1f2937',
+                        font: {
+                            size: 13,
+                            weight: 'bold'
+                        }
+                    }
+                }
             }
-          },
-          beginAtZero: true
-        },
-        y: {
-          ticks: {
-            color: '#1f2937',
-            font: {
-              size: 13,
-              weight: 'bold'
-            }
-          }
         }
-      }
-    }
-  });
+    });
+</script>
 </script>
 
                 </div>

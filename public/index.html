@@ -43,19 +43,28 @@
     <section class="bg-stone-50 pt-24 pb-32">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="max-w-4xl">
-                <h1 class="text-5xl lg:text-7xl font-medium tracking-tight text-stone-900 mb-8 text-balance leading-tight">
+                <h1 class="text-5xl lg:text-7xl font-medium tracking-tight text-stone-900 mb-8 text-balance leading-tight opacity-0 translate-y-8 animate-fade-in-up [animation-delay:.1s]">
                     We Deliver Performance Inside 
                     <span class="underline decoration-stone-300 decoration-4 underline-offset-8"></span> 
                     Simplicity
                 </h1>
-                <p class="text-xl lg:text-2xl text-stone-600 mb-12 max-w-3xl leading-relaxed">
+                <p class="text-xl lg:text-2xl text-stone-600 mb-12 max-w-3xl leading-relaxed opacity-0 translate-y-8 animate-fade-in-up [animation-delay:.3s]">
                     We know we like simplicity, therefore we process and organize complexity into a simple, elegant and efficient solution.
                 </p>
+                <style>
+                @keyframes fade-in-up {
+                  0% { opacity: 0; transform: translateY(32px);}
+                  100% { opacity: 1; transform: translateY(0);}
+                }
+                .animate-fade-in-up {
+                  animation: fade-in-up 1s cubic-bezier(.4,0,.2,1) forwards;
+                }
+                </style>
             </div>
             
             <div class="grid lg:grid-cols-2 gap-8 max-w-5xl">
                 <!-- Business Solutions Card -->
-                <div class="bg-white rounded-2xl p-8 hover-lift border border-stone-200/50">
+                <div class="bg-white rounded-2xl p-8 hover-lift border border-stone-200/50 opacity-0 translate-y-8 animate-fade-in-up [animation-delay:.4s]">
                     <div class="mb-6">
                         <h3 class="text-sm font-semibold text-stone-500 uppercase tracking-wide mb-2">Agency and Business Solutions</h3>
                         <h2 class="text-2xl font-semibold text-stone-900 mb-4">Transform Your Operations</h2>
@@ -69,7 +78,7 @@
                 </div>
 
                 <!-- Security Solutions Card -->
-                <div class="bg-white rounded-2xl p-8 hover-lift border border-stone-200/50">
+                <div class="bg-white rounded-2xl p-8 hover-lift border border-stone-200/50 opacity-0 translate-y-8 animate-fade-in-up [animation-delay:.6s]">
                     <div class="mb-6">
                         <h3 class="text-sm font-semibold text-stone-500 uppercase tracking-wide mb-2">Network Security</h3>
                         <h2 class="text-2xl font-semibold text-stone-900 mb-4">Secure Your Infrastructure</h2>
@@ -104,7 +113,7 @@
                         <span class="text-sm font-semibold text-stone-500 uppercase tracking-wide">Business Solutions</span>
                         <h3 class="text-2xl font-semibold text-stone-900 mt-2 mb-4">Enterprise Software Suite</h3>
                         <p class="text-stone-600 leading-relaxed">
-                            Three powerful software solutions that transform how your organization operates, manages relationships, and analyzes performance.
+                            Our business and agency solutions are solutions that are specialized in areas such as offices, agencies, communities and others, with an AI powered platform, optimize performance in your business and agency or just your community to be better and easier.
                         </p>
                     </div>
 
