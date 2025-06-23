@@ -16,6 +16,162 @@
         .hover-lift:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
         .card-minimal { background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); }
     </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Clean Animations */
+        @keyframes fade-in-up {
+            0% { 
+                opacity: 0; 
+                transform: translateY(20px);
+            }
+            100% { 
+                opacity: 1; 
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fade-in {
+            0% { 
+                opacity: 0;
+            }
+            100% { 
+                opacity: 1;
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fade-in-up 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+        
+        .animate-fade-in {
+            animation: fade-in 0.6s ease-out forwards;
+        }
+        
+        /* Clean hover effects */
+        .card-hover {
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* Button styles */
+        .btn-primary {
+            background: #1a1a1a;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .btn-primary:hover {
+            background: #333;
+        }
+        
+        .btn-secondary {
+            border: 1px solid #e5e5e5;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .btn-secondary:hover {
+            border-color: #d4d4d4;
+            background: #fafafa;
+        }
+        
+        .abstract-shape {
+            position: absolute;
+            border-radius: 50%;
+        }
+        
+        .shape-1 {
+            width: 120px;
+            height: 120px;
+            background: #d4a574;
+            top: 15%;
+            right: 25%;
+        }
+        
+        .shape-2 {
+            width: 80px;
+            height: 80px;
+            background: #d4a574;
+            top: 25%;
+            right: 15%;
+        }
+        
+        .shape-3 {
+            width: 60px;
+            height: 60px;
+            background: #d4a574;
+            top: 35%;
+            right: 35%;
+        }
+        
+        .shape-4 {
+            width: 100px;
+            height: 100px;
+            background: #000000;
+            bottom: 25%;
+            right: 20%;
+        }
+        
+        .shape-5 {
+            width: 70px;
+            height: 70px;
+            background: #d4a574;
+            bottom: 15%;
+            right: 30%;
+        }
+        
+        /* Connecting lines */
+        .line {
+            position: absolute;
+            background: #d4a574;
+            transform-origin: left center;
+        }
+        
+        .line-1 {
+            width: 80px;
+            height: 3px;
+            top: 22%;
+            right: 22%;
+            transform: rotate(45deg);
+        }
+        
+        .line-2 {
+            width: 60px;
+            height: 3px;
+            top: 32%;
+            right: 25%;
+            transform: rotate(-30deg);
+        }
+        
+        .line-3 {
+            width: 70px;
+            height: 3px;
+            bottom: 22%;
+            right: 25%;
+            transform: rotate(120deg);
+        }
+        
+        /* Abstract curved line */
+        .curved-line {
+            position: absolute;
+            bottom: 10%;
+            right: 5%;
+            width: 200px;
+            height: 200px;
+        }
+        
+        .curved-line svg {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body class="bg-stone-50 text-stone-900 antialiased">
     <!-- Header -->
@@ -39,61 +195,72 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="bg-stone-50 pt-24 pb-32">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <section class="min-h-screen pt-24 pb-20 relative overflow-hidden">
+        <!-- Abstract Illustration -->
+        <div class="absolute inset-0 pointer-events-none">
+            <!-- Network nodes -->
+            <div class="shape-1 abstract-shape opacity-0 animate-fade-in [animation-delay:0.8s]"></div>
+            <div class="shape-2 abstract-shape opacity-0 animate-fade-in [animation-delay:1s]"></div>
+            <div class="shape-3 abstract-shape opacity-0 animate-fade-in [animation-delay:1.2s]"></div>
+            <div class="shape-4 abstract-shape opacity-0 animate-fade-in [animation-delay:1.4s]"></div>
+            <div class="shape-5 abstract-shape opacity-0 animate-fade-in [animation-delay:1.6s]"></div>
+            
+            <!-- Connecting lines -->
+            <div class="line line-1 opacity-0 animate-fade-in [animation-delay:1.8s]"></div>
+            <div class="line line-2 opacity-0 animate-fade-in [animation-delay:2s]"></div>
+            <div class="line line-3 opacity-0 animate-fade-in [animation-delay:2.2s]"></div>
+            
+            <!-- Curved abstract line -->
+            <div class="curved-line opacity-0 animate-fade-in [animation-delay:2.4s]">
+                <svg viewBox="0 0 200 200" fill="none">
+                    <path d="M20 180 Q 100 120 180 160 Q 160 100 120 80" stroke="#1a1a1a" stroke-width="8" stroke-linecap="round" fill="none"/>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
             <div class="max-w-4xl">
-                <h1 class="text-5xl lg:text-7xl font-medium tracking-tight text-stone-900 mb-8 text-balance leading-tight opacity-0 translate-y-8 animate-fade-in-up [animation-delay:.1s]">
-                    We Deliver Performance Inside 
-                    <span class="underline decoration-stone-300 decoration-4 underline-offset-8"></span> 
-                    Simplicity
+                <h1 class="text-5xl lg:text-7xl font-normal text-stone-900 mb-8 leading-tight opacity-0 translate-y-8 animate-fade-in-up [animation-delay:.1s]">
+                    We Deliver Performance Inside
+                    <br class="hidden sm:block">
+                    <span class="underline decoration-stone-400 decoration-4 underline-offset-8">Simplicity</span>
                 </h1>
-                <p class="text-xl lg:text-2xl text-stone-600 mb-12 max-w-3xl leading-relaxed opacity-0 translate-y-8 animate-fade-in-up [animation-delay:.3s]">
+                <p class="text-xl lg:text-2xl text-stone-600 mb-16 max-w-3xl leading-relaxed opacity-0 translate-y-8 animate-fade-in-up [animation-delay:.3s]">
                     We know we like simplicity, therefore we process and organize complexity into a simple, elegant and efficient solution.
                 </p>
-                <style>
-                @keyframes fade-in-up {
-                  0% { opacity: 0; transform: translateY(32px);}
-                  100% { opacity: 1; transform: translateY(0);}
-                }
-                .animate-fade-in-up {
-                  animation: fade-in-up 1s cubic-bezier(.4,0,.2,1) forwards;
-                }
-                </style>
             </div>
             
-            <div class="grid lg:grid-cols-2 gap-8 max-w-5xl">
+            <div class="grid lg:grid-cols-2 gap-6 max-w-5xl">
                 <!-- Business Solutions Card -->
-                <div class="bg-white rounded-2xl p-8 hover-lift border border-stone-200/50 opacity-0 translate-y-8 animate-fade-in-up [animation-delay:.4s]">
+                <div class="bg-white rounded-2xl p-8 card-hover border border-stone-200 opacity-0 translate-y-8 animate-fade-in-up [animation-delay:.4s]">
                     <div class="mb-6">
-                        <h3 class="text-sm font-semibold text-stone-500 uppercase tracking-wide mb-2">Agency and Business Solutions</h3>
+                        <h3 class="text-xs font-semibold text-stone-500 uppercase tracking-wide mb-2">AGENCY.BUSINESS</h3>
                         <h2 class="text-2xl font-semibold text-stone-900 mb-4">Transform Your Operations</h2>
-                        <p class="text-stone-600 leading-relaxed">
+                        <p class="text-stone-600 leading-relaxed text-base">
                             We process the high complexity in your business solutions into simpler, faster and easier to understand solutions.
                         </p>
                     </div>
-                    <a href="/agency" class="bg-stone-900 text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-stone-800 transition-colors w-full inline-block text-center">
+                    <a href="/agency" class="btn-primary text-white px-6 py-3 rounded-lg text-sm font-medium w-full block text-center">
                         Explore Solutions
                     </a>
                 </div>
 
                 <!-- Security Solutions Card -->
-                <div class="bg-white rounded-2xl p-8 hover-lift border border-stone-200/50 opacity-0 translate-y-8 animate-fade-in-up [animation-delay:.6s]">
+                <div class="bg-white rounded-2xl p-8 card-hover border border-stone-200 opacity-0 translate-y-8 animate-fade-in-up [animation-delay:.6s]">
                     <div class="mb-6">
-                        <h3 class="text-sm font-semibold text-stone-500 uppercase tracking-wide mb-2">Network Security</h3>
+                        <h3 class="text-xs font-semibold text-stone-500 uppercase tracking-wide mb-2">API</h3>
                         <h2 class="text-2xl font-semibold text-stone-900 mb-4">Secure Your Infrastructure</h2>
-                        <p class="text-stone-600 leading-relaxed">
+                        <p class="text-stone-600 leading-relaxed text-base">
                             Monitoring network security, and testing it can be made easier if it goes through a simple but still sophisticated and efficient process.
                         </p>
                     </div>
-                    <a href="/security" class="border border-stone-300 text-stone-900 px-6 py-3 rounded-lg text-small font-medium hover:bg-stone-50 transition-colors w-full inline-block text-center">
-                        Learn More
+                    <a href="/security" class="btn-secondary text-stone-900 px-6 py-3 rounded-lg text-sm font-medium w-full block text-center">
+                        Learn more
                     </a>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Solutions Detail Section -->
     <section id="solutions" class="bg-stone-100/50 py-32">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
