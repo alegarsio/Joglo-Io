@@ -1,0 +1,93 @@
+
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fade-in-up 3.10s ease-out forwards;
+        }
+
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel-track {
+            display: flex;
+            animation: scroll-left 75s linear infinite;
+            width: calc(200% + 5rem); /* 3 bagian x 5 item, pastikan track cukup panjang */
+        }
+
+        .carousel-track > * {
+            flex: 0 0 144px; /* Lebar item sesuai .partner-card */
+            margin-right: 2rem;
+        }
+
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        .partner-card {
+            flex: 0 0 auto;
+            width: 144px; /* w-36 */
+            height: 80px; /* h-20 */
+            margin-right: 2rem;
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        .partner-card img {
+            max-height: 3rem;
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* Gradient overlays for smooth fade effect */
+        .carousel-container::before,
+        .carousel-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .carousel-container::before {
+            left: 0;
+            background: linear-gradient(to right, rgb(245 245 244 / 0.7), transparent);
+        }
+
+        .carousel-container::after {
+            right: 0;
+            background: linear-gradient(to left, rgb(245 245 244 / 0.7), transparent);
+        }
+ 
