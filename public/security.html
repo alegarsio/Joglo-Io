@@ -38,12 +38,54 @@
                 </div>
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="/" class="text-stone-600 hover:text-stone-900 transition-colors text-sm font-medium">Home</a>
-                    <a href="/agency" class="text-stone-900 font-medium text-sm">Business and Agency Solution</a>
-                    <a href="security.html" class="text-stone-900 font-medium text-sm">Network Security Solutions</a>
+                    <a href="/agency" class="text-stone-600 hover:text-stone-900 transition-colors text-sm font-medium">Business & Agency</a>
+                    <a href="/security" class="text-stone-600 hover:text-stone-900 transition-colors text-sm font-medium">Contact</a>
                     <button class="bg-stone-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-stone-800 transition-colors">
                         Get Started
                     </button>
                 </nav>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-stone-900 focus:outline-none" aria-label="Open menu">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Mobile menu -->
+                <div id="mobile-menu" class="fixed inset-0 z-50 bg-white/95 backdrop-blur-lg flex flex-col items-center justify-center space-y-8 text-center transition-all duration-200 opacity-0 pointer-events-none md:hidden">
+                    <button id="mobile-menu-close" class="absolute top-6 right-6 text-stone-900" aria-label="Close menu">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                    <a href="/" class="text-stone-900 text-lg font-medium hover:text-stone-600 transition-colors" onclick="closeMobileMenu()">Home</a>
+                    <a href="/agency" class="text-stone-900 text-lg font-medium hover:text-stone-600 transition-colors" onclick="closeMobileMenu()">Business & Agency</a>
+                    <a href="/security" class="text-stone-900 text-lg font-medium hover:text-stone-600 transition-colors" onclick="closeMobileMenu()">Security</a>
+                    <button class="bg-stone-900 text-white px-6 py-3 rounded-lg text-base font-medium hover:bg-stone-800 transition-colors w-48 mx-auto" onclick="closeMobileMenu()">
+                        Get Started
+                    </button>
+                </div>
+                <script>
+                    // Mobile menu toggle
+                    const menuBtn = document.getElementById('mobile-menu-button');
+                    const menu = document.getElementById('mobile-menu');
+                    const closeBtn = document.getElementById('mobile-menu-close');
+                    function openMobileMenu() {
+                        menu.style.opacity = '1';
+                        menu.style.pointerEvents = 'auto';
+                    }
+                    function closeMobileMenu() {
+                        menu.style.opacity = '0';
+                        menu.style.pointerEvents = 'none';
+                    }
+                    menuBtn?.addEventListener('click', openMobileMenu);
+                    closeBtn?.addEventListener('click', closeMobileMenu);
+                    // Close on link click
+                    menu.querySelectorAll('a,button').forEach(el => {
+                        el.addEventListener('click', closeMobileMenu);
+                    });
+                </script>
             </div>
         </div>
     </header>
